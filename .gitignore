@@ -1,0 +1,23 @@
+# TensorFlow graph data files
+events.out.tfevents*
+
+/images
+/training_images
+/test_images
+
+/data
+/training_data
+/test_data
+
+/ssd_inception_v2_coco_2017_11_17
+
+ssd_inception_v2_coco_2017_11_17.tar
+ssd_inception_v2_coco_2017_11_17.tar.gz
+
+/ssd_mobilenet_v1_coco_2017_11_17
+
+ssd_mobilenet_v1_coco_2017_11_17.tar.gz
+
+/training
+
+/inference_graph
