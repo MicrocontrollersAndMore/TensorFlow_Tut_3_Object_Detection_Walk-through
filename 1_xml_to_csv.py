@@ -66,11 +66,11 @@ def checkIfNecessaryPathsAndFilesExist():
 
     # get a list of all the .jpg / .xml file pairs in the training images directory
     trainingImagesWithAMatchingXmlFile = []
-    for file in os.listdir(TRAINING_IMAGES_DIR):
-        if file.endswith(".jpg"):
-            xmlFileName = os.path.splitext(file)[0] + ".xml"
+    for fileName in os.listdir(TRAINING_IMAGES_DIR):
+        if fileName.endswith(".jpg"):
+            xmlFileName = os.path.splitext(fileName)[0] + ".xml"
             if os.path.exists(os.path.join(TRAINING_IMAGES_DIR, xmlFileName)):
-                trainingImagesWithAMatchingXmlFile.append(file)
+                trainingImagesWithAMatchingXmlFile.append(fileName)
             # end if
         # end if
     # end for
@@ -103,11 +103,11 @@ def checkIfNecessaryPathsAndFilesExist():
 
     # get a list of all the .jpg / .xml file pairs in the test images directory
     testImagesWithAMatchingXmlFile = []
-    for file in os.listdir(TEST_IMAGES_DIR):
-        if file.endswith(".jpg"):
-            xmlFileName = os.path.splitext(file)[0] + ".xml"
+    for fileName in os.listdir(TEST_IMAGES_DIR):
+        if fileName.endswith(".jpg"):
+            xmlFileName = os.path.splitext(fileName)[0] + ".xml"
             if os.path.exists(os.path.join(TEST_IMAGES_DIR, xmlFileName)):
-                testImagesWithAMatchingXmlFile.append(file)
+                testImagesWithAMatchingXmlFile.append(fileName)
             # end if
         # end if
     # end for
