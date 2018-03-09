@@ -5,6 +5,8 @@ events.out.tfevents*
 /training_images
 /test_images
 
+/traffic_lights
+
 /data
 /training_data
 /test_data
