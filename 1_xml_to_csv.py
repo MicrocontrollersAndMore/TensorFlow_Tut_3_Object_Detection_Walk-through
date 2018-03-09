@@ -1,4 +1,4 @@
-# xml_to_csv.py
+# 1_xml_to_csv.py
 
 # Note: substantial portions of this code, expecially the actual XML to CSV conversion, are credit to Dat Tran
 # see his website here: https://towardsdatascience.com/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9
