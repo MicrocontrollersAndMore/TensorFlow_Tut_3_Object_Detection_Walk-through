@@ -1,4 +1,4 @@
-# train.py
+# 3_train.py
 #
 # original source from Google:
 # https://github.com/tensorflow/models/blob/master/research/object_detection/train.py
