@@ -21,7 +21,7 @@ PIPELINE_CONFIG_PATH = os.getcwd() + "/" + "ssd_inception_v2_coco.config"
 
 # verify this extracted directory exists,
 # also verify it's the directory referred to by the 'fine_tune_checkpoint' parameter in your (pipeline).config file
-MODEL_DIR = os.getcwd() + "/" + "ssd_inception_v2_coco_2017_11_17"
+MODEL_DIR = os.getcwd() + "/" + "ssd_inception_v2_coco_2018_01_28"
 
 # verify that your MODEL_DIR contains these files
 FILES_MODEL_DIR_MUST_CONTAIN = [ "checkpoint" ,
