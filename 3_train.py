@@ -8,7 +8,7 @@ import json
 import os
 import tensorflow as tf
 
-from object_detection import trainer
+from object_detection.legacy import trainer
 from object_detection.builders import dataset_builder
 from object_detection.builders import model_builder
 from object_detection.utils import config_util
@@ -65,7 +65,7 @@ def main(_):
     # ToDo: this nested function seems odd, factor this out eventually ??
     # nested function
     def get_next(config):
-        return dataset_util.make_initializable_iterator(dataset_builder.build(config)).get_next()
+        return dataset_builder.make_initializable_iterator(dataset_builder.build(config)).get_next()
     # end nested function
 
     create_input_dict_fn = functools.partial(get_next, input_config)
@@ -122,7 +122,8 @@ def checkIfNecessaryPathsAndFilesExist():
     # end if
 
     missingModelMessage = "Did you download and extract the model from the TensorFlow GitHub models repository detection model zoo?" + "\n" + \
-                          "https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md"
+                          "https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md" + "\n" + \
+                          "ssd_inception_v2_coco is recommended"
 
     # check if the model directory exists
     if not os.path.exists(MODEL_DIR):

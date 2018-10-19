@@ -7,6 +7,7 @@ import cv2
 
 from utils import label_map_util
 from utils import visualization_utils as vis_util
+from distutils.version import StrictVersion
 
 # module level variables ##############################################################################################
 TEST_IMAGE_DIR = os.getcwd() +  "/test_images"
@@ -24,7 +25,7 @@ def main():
 
     # this next comment line is necessary to avoid a false PyCharm warning
     # noinspection PyUnresolvedReferences
-    if tf.__version__ < '1.5.0':
+    if StrictVersion(tf.__version__) < StrictVersion('1.5.0'):
         raise ImportError('Please upgrade your tensorflow installation to v1.5.* or later!')
     # end if
 

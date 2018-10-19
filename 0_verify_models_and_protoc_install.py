@@ -10,6 +10,7 @@ from six.moves import urllib
 import tarfile
 import tensorflow as tf
 import cv2
+from distutils.version import StrictVersion
 
 # module level variables ##############################################################################################
 PROTOS_DIR = "C:/TensorFlow/models/research/object_detection/protos"
@@ -46,7 +47,7 @@ def main():
     # if TensorFlow version is too old, show error message and bail
     # this next comment line is necessary to avoid a false warning if using the editor PyCharm
     # noinspection PyUnresolvedReferences
-    if tf.__version__ < '1.5.0':
+    if StrictVersion(tf.__version__) < StrictVersion('1.5.0'):
         print('error: Please upgrade your tensorflow installation to v1.5.* or later!')
         return
     # end if
